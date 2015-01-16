@@ -8,8 +8,7 @@ from matplotlib.path import Path
 from matplotlib.collections import PathCollection
 from mpl_toolkits.basemap import Basemap
 
-# Since we pass around the figure, axes, and basemap instances a lot, we wrap them up 
-# in a namedtuple
+# We pass around (figure, axes, basemap) a lot, so wrap them in a namedtuple
 MapData = namedtuple('MapData', ["fig", "axes", "bmap"])
 
 def draw_arizona(min_lon=-115.0, max_lon=-109.0, min_lat=30.0, max_lat=38.0, figsize=(6,6)):
